@@ -2,10 +2,20 @@ body {
     max-width: 1020px;
     margin: 0 auto;
 }
-.wrapper {
-    max-width: 1020px;
-    margin: 0 auto;
+input {
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 12px solid #000;
 }
+div {
+    max-width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* header*/
 header {
     background: #323232;
     height: 63px;
@@ -13,7 +23,6 @@ header {
 }
 .navigation {
     display:flex;
-   /* width: 369px;*/
     margin-left: 5px;
 }
 .menu {
@@ -22,12 +31,17 @@ header {
     display: flex;
     justify-content: center;
     color: #484c5f;
+    margin-left: 8px;
 }
 .left-item {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-  
+}
+.right-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 .menu-logo {
     margin-left: 26px;
@@ -47,14 +61,10 @@ header {
 .menu-item1 {
     margin-right: 11.5px;
 }
-.right-item {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
 .menu-item2 {
     margin-right: 11.5px;
 }
+/*triangle*/
 header:after {
     content:"";
     width: 0;
@@ -66,9 +76,7 @@ header:after {
     left: 50%;
     bottom:0;
     top: 63px;
-    /*margin-left: -25px;*/
     transform: translateX(-50%);
-
 }
 .header-wrap {
     display: flex;
@@ -84,7 +92,6 @@ header:after {
    width:40%;
    margin-top: -11px;
    margin-left: 30px;
-
 }
 .sep-right {
     justify-content: right;
@@ -93,31 +100,23 @@ header:after {
     margin-top: -11px;
     margin-right: 30px;
     margin-left: auto;
- }
+}
+/*main*/
 .main {
     height: 720px;
     background: #ffffff;
 }
+/*hexagon section*/
 .main-hexagon-wrap {
     position: relative;
     margin-bottom: 83px;
 }
 .hexagon {
-	/*width: 180px;
-    height: 205px;
-	background: #ffffff;
-    position: relative;
-    /*float: left;
-    margin: 0 3px 0 0;
-    overflow: hidden;*/
     width: 180px;
     height: 217px;
-    
-   
     transform: rotate(120deg);
     overflow: hidden;
     visibility:hidden;
-    
 }
 .hex-layer-1 {
     visibility:hidden;
@@ -133,9 +132,8 @@ header:after {
     transform: rotate(-60deg);
     overflow: hidden;
     visibility:visible;
-    /*background-image: url("./assets/Layer\ 31@1X.png");*/
-   
 }
+/*hexagon in about section*/
 .hex-layer-sam {
     width: 100%;
     height: 100%;
@@ -150,11 +148,8 @@ header:after {
 }
 
 .hexagon img {
-    
     width: 100%;
     height: 100%;
-
-    
 }
 .row1 .hexagon {
     margin-right:18px;
@@ -164,7 +159,6 @@ header:after {
     justify-content: center;
     margin-top: 84px;
     margin-left: 13px;
-    
 }
 .main-hexagon-wrap .main-row1-sep-left {
     position: absolute;
@@ -206,7 +200,15 @@ header:after {
     height: 1px;
     width: 960px;
 }
-
+.main-rectangle {
+    display: flex;
+    position: absolute;
+    top: 607px;
+    left: 30px;
+}
+.main-rectangle img {
+    margin-right: 3px;
+}
 .main-hexagon-wrap .row2 {
     display: flex;
     justify-content: center;
@@ -229,26 +231,67 @@ header:after {
     margin-right: 20px;
     
 }
-input {
-    width: 100%;
-    margin-top: 20px;
-    box-sizing: border-box;
-    border: 12px solid #000;
-     
-}
-div {
-    max-width: 100%;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
 /* section about */
 .about {
     background: #2eb398;
     max-width: 100%;
     height: 341px;
     position: relative;
+}
+/*contact icons*/
+.facebook{
+    display: block;
+    background: url(./assets/Facebook@1X.png);
+    width: 25px;
+    height: 24px;
+}
+.facebook:hover {
+    background: url(./assets/facebookhov@1X.png);
+}
+.twitter{
+    display: block;
+    background: url(./assets/Twitter@1X.png);
+    width: 24px;
+    height: 24px;
+}
+.twitter:hover {
+    background: url(./assets/twitterhov@1X.png);
+}
+.google{
+    display: block;
+    background: url(./assets/Google@1X.png);
+    width: 25px;
+    height: 24px;
+}
+.google:hover {
+    background: url(./assets/googlehov@1X.png);
+}
+.pinterest{
+    display: block;
+    background: url(./assets/Pinterest@1X.png);
+    width: 24px;
+    height: 24px;
+}
+.pinterest:hover {
+    background: url(./assets/pinteresthov@1X.png);
+}
+.linkedin {
+    display: block;
+    background: url(./assets/Linkedin@1X.png);
+    width: 25px;
+    height: 24px;
+}
+.linkedin:hover {
+    background: url(./assets/linkedinhov@1X.png);
+}
+.dribbble{
+    display: block;
+    background: url(./assets/Dribbble@1X.png);
+    width: 24px;
+    height: 24px;
+}
+.dribbble:hover {
+    background: url(./assets/dribbblehov@1X.png);
 }
 @font-face {
     font-family: MavenProRegular; 
@@ -274,7 +317,6 @@ img {
     margin-top: 0;
     font-weight: lighter;
     letter-spacing: 1px;
-
 }
 .content-inform {
     padding-left: 319px;
@@ -293,7 +335,6 @@ img {
     width:180px;
     height: 206px;
 }
-
 .about .left-line-about{
     position: absolute;
     top: 13px;
@@ -310,14 +351,12 @@ img {
     width: 1px;
     height: 316px;
 }
-/*contacts*/
 .about .contacts {
     position: absolute;
     top: 250px;
     left: 753px;
     display: flex;
     max-width: 100%;
-    /*max-height: 24px;*/
 }
 /*footer form*/
 legend {
@@ -340,18 +379,17 @@ legend p {
     background-color: #323232;
     position: relative;
     height: 564px;
-
 }
 .input-wrap {
     padding-left: 120px;
     width: 580px;
 }
 .input-wrap input:first-child {
-    margin-top: 20px;
+    margin-top: 17px;
 }
 input {
     background-color: #454545;
-    margin-top: 16px;
+    margin-top: 15px;
     padding: 0 0 0 15px;
     border: none;
     line-height: 39px;
@@ -359,7 +397,6 @@ input {
     font-size: 8pt;
     color: rgba(190, 190, 190, 255);
     text-align: justify;
-    
 }
 textarea {
     background-color: #454545;
@@ -376,6 +413,7 @@ textarea {
     position: relative;
 }
 button {
+    margin-top: 11px;
     padding: 14px 30px;
     width: 90px;
     height: 37px;
@@ -445,7 +483,7 @@ button {
     box-sizing: border-box;
     background-color: #222222;
     font-family: ﻿MavenProRegular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular, sans-serif;
-font-size: 8.65655pt;
-color: rgba(69, 69, 69, 255);
-text-align: justify;
+    font-size: 8.65655pt;
+    color: rgba(69, 69, 69, 255);
+    text-align: justify;
 }
